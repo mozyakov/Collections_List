@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,5 +28,22 @@ public class Main {
         }
 
         System.out.println(list2);
+
+        /*for (Object o : list) {
+            System.out.println(o);
+        }*/
+        int[] arr = {-3, -5, -2, 0, 1, 2, 3};
+        long count = Arrays.stream(arr)
+                .filter(i -> i > 0)
+                .count();
+        System.out.println(count);  //выйдет число 3, птмч в массиве три числа больше 0
+
+        List<String>list99 = Arrays.asList("Moscow", "London", "Lima", "Tokyo");
+        list99.stream()
+                .filter(x -> x.length() > 4)
+                .filter(x -> x.contains("L"))
+                .forEach(System.out::println); //выведет London
+
+
     }
 }
