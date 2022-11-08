@@ -43,7 +43,7 @@ public class Main {
                 .filter(x -> x.length() > 4)
                 .filter(x -> x.contains("L"))
                 .forEach(System.out::println); //выведет London
-
+        
 
     }
 }
